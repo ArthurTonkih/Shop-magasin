@@ -3,7 +3,7 @@ include "nav.php";
 ?>
 
 <dir class="news">
-	<h2 align="center">Новости</h2>
+	<h2 align="center">Новости </h2>
 </dir>
 
 <?
