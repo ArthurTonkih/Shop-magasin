@@ -1,5 +1,3 @@
-
-
 $('.cartadd').click(function(){
 	idProduct = this.id;
 	console.log(idProduct);
@@ -19,4 +17,11 @@ $('.cartadd').click(function(){
 			else{ console.log('Данные не сохранены') }
 		}
 	});
+})
+
+
+
+$('.categories input').change(function(){
+	$('.categories li').removeClass('categories-activ')
+	$(this).closest('li').toggleClass('categories-activ')
 })

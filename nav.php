@@ -7,14 +7,12 @@
 		<title>SHOP-MAGAZIN</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-		<script type="text/javascript" src="js.js"></script>
 </head>
 <body>
 <div class="header">
 	<div class="social">
 		<? if (!@$_COOKIE['id']) {
-			echo "<a href='req.php'>Регистрация</a>
+			echo "<a href='reg.php'>Регистрация</a>
 			<a href='auth.php'>Вход</a>";
 		} else {
 			echo "<a href='?logout=1'>Выйти</a>";

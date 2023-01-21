@@ -9,7 +9,7 @@
 		<p>Все права защищены</p> 
 </div>
 
-<script src="../jquery-3.6.1.min.js"></script>
+<script src="admin/jquery-3.6.0.min.js"></script>
 <script src="jss.js"></script>
 </body>
 </html>

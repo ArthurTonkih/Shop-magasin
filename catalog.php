@@ -1,9 +1,8 @@
 <?
 include "nav.php";
 ?>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <?
-$link = mysqli_connect('localhost', 'root', '', 'shop');
 
 $req = "SELECT * FROM `drinks`";
 
@@ -30,7 +29,7 @@ while ($row = mysqli_fetch_assoc($result))
 
 <form>
 		<div class="filters">
- 	<ul class="categories-filters">
+ 	<ul class="categories filters">
  		<h3>Категория</h3>
 	<?
 	$req = "SELECT * FROM `categories`";
