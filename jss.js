@@ -9,10 +9,10 @@ $('.cartadd').click(function(){
 				},
 		success:function (data) {
 			console.log(data)
-			if (data =='ok'){
-				let n = parseInt($('.idProduct').text())
+			if (data=='ok'){
+				let n = parseInt($('.number-product').text())
 				n++
-				$('.idProduct').text(n)
+				$('.number-product').text(n)
 					}
 			else{ console.log('Данные не сохранены') }
 		}

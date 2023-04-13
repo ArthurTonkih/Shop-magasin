@@ -3,8 +3,6 @@ include "nav.php";
 ?>
 
 <?php
-$link = mysqli_connect('localhost', 'root', '', 'shop');
-
 $req = "SELECT * FROM `drinks`";
 $result = mysqli_query($link, $req);
 $drinks = [];
@@ -13,17 +11,7 @@ while ($row = mysqli_fetch_assoc($result))
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таблица товаров</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-</head>
-<body>
+
     <h2>Таблица товаров</h2>
     <table>
         <tr>
@@ -50,8 +38,6 @@ while ($row = mysqli_fetch_assoc($result))
     <? echo "<br>"; ?>
 <div class= 'add-products'><a href="add_product.php"><button>Добавление товара</button></a></div>
 
-<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="js.js"></script>
-</body>
-</html>
 
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js.js?<?php echo time() ?>"></script>

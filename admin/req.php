@@ -1,5 +1,6 @@
 <?
 $link = mysqli_connect('localhost', 'root', '', 'shop');
+
 if ($_POST['req']=='delproduct'){
 	$id=$_POST['id'];
 	$req = 'DELETE FROM `drinks` WHERE `id`= '.$id;

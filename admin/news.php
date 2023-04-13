@@ -3,8 +3,6 @@ include "nav.php";
 ?>
 
 <?php
-$link = mysqli_connect('localhost', 'root', '', 'shop');
-
 $req = "SELECT * FROM `news`";
 $result = mysqli_query($link, $req);
 $news = [];
@@ -41,4 +39,4 @@ while ($row = mysqli_fetch_assoc($result))
     <div class= 'add-news'><a href="add_news.php"><button>Добавление Новости</button></a></div>
     
 <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="js_news.js"></script>
+<script type="text/javascript" src="js_news.js?<?php echo time() ?>"></script>

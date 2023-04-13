@@ -1,5 +1,4 @@
 $('.news-delete').click(function(){
-	console. log('Привет мир')
 	id=$(this).attr('id')
 	el=$(this)
 	$.ajax({

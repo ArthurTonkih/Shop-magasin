@@ -1,5 +1,5 @@
 $('.gds-delete').click(function(){
-	console. log('Привет мир')
+	console.log('Привет мир')
 	id=$(this).attr('id')
 	el=$(this)
 	$.ajax({
@@ -10,8 +10,9 @@ $('.gds-delete').click(function(){
 				req: 'delproduct'
 			},
 			success: function(data){
-				console.log(data)
-				if (data.intexOf('ok')!=-1) {
+				console.log('Привет мир')
+				console. log(data)
+				if (data.indexOf('ok')!=-1) {
 					el.closest('tr').remove()
 				}
 			}

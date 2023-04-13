@@ -4,9 +4,20 @@ include "nav.php";
 
 
     <form method="POST" enctype = "multipart/form-data">
-        <p>Введите название новости <input type="text" name="name"></p>
-        <p>Введите подзаголовок новости <input type="text" name="subtitle"></p>
-        <p>Введите новость <input type="text" name="news"></p>
+        <div class="label-float">
+            <input type="text" name="name" placeholder=" "/>
+            <label>Название</label>
+        </div>
+
+        <div class="label-float">
+            <input type="text" name="subtitle" placeholder=" "/>
+            <label>Подзаголовок</label>
+        </div>
+
+        <div class="label-float">
+            <input type="text" name="news" placeholder=" "/>
+            <label>Новость</label>
+        </div>
         <p>Выберите картинку новости <input type="file" name="img"></p>
         <p><input type="submit" name="ok" value="Добавить"></p>
     </form>
@@ -14,7 +25,6 @@ include "nav.php";
 
 <?
 if ($_POST['ok']) {
-    $link = mysqli_connect('localhost', 'root', '', 'shop');
     $name = $_POST['name'];
     $subtitle = $_POST['subtitle'];
     $news = $_POST['news'];

@@ -1,12 +1,25 @@
 <?
+
+if (isset($_GET['logout'])) {
+	setcookie('id','');
+	header("Location: /");
+}
+
 	$link = mysqli_connect('localhost', 'root', '', 'shop');
+	if (@$_COOKIE['id']){
+		$query = "SELECT COUNT(`idProduct`) as `count` FROM `cart` WHERE `id_users` = ".$_COOKIE['id'];
+		$res = mysqli_query($link, $query);
+		$count = mysqli_fetch_assoc($res)['count'];
+	} else {
+		$count = 0;
+	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 		<title>SHOP-MAGAZIN</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css?<?php echo time() ?>">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 <div class="header">
@@ -28,12 +41,14 @@
 			<div class="navbar-wrap">
 			<ul class="navbar-menu">
 				<li><a href="index.php">Главная</a></li>
+				<li><a href="profile.php">Профиль</a></li>
 				<li><a href="catalog.php">Каталог</a></li>
 				<li><a href="news.php">Новости</a></li>
+				<li><a href="favorite.php">Избранное</a></li>
 			</ul>
-			<a href='cart.php'>
+			<a href='basket.php'>
 			 	<div class = "cart">
-			 		<div class="number-product">0</div>
+			 		<div class="number-product"><? echo $count?></div>
 				<i class="fa fa-shopping-cart fa-2x"></i> 
 				</div>
 			</a>
@@ -41,4 +56,5 @@
 	</div>
 		<hr>
 </div>
+
 
