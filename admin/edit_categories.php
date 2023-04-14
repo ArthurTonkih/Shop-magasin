@@ -17,7 +17,9 @@ $id = $_GET['id'];
             <label>Категория</label>
         </div>
 
-        <p><input type="submit" name="ok" value="Сохранять"></p>
+        <div class="containers">
+            <h3><input type="submit" class="neon-btn blue" name="ok" value="Сохранить"></h3>
+        </div>
     </form>
 
 
@@ -28,4 +30,8 @@ if($_POST['ok']){
     $req.=" WHERE `id`=$id";
     mysqli_query($link,$req) or die(mysqli_error($link));
 }
+?>
+
+<?
+include "footer.php";
 ?>

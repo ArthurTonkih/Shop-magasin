@@ -40,3 +40,8 @@ while ($row = mysqli_fetch_assoc($result))
     
 <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="js_news.js?<?php echo time() ?>"></script>
+
+
+<?
+include "footer.php";
+?>

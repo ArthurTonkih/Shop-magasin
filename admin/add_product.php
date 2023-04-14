@@ -46,7 +46,9 @@ include "nav.php";
             ?>
         </select>
 
-        <p><input type="submit" name="ok" value="Добавить"></p>
+        <div class="containers">
+            <h3><input type="submit" class="neon-btn blue" name="ok" value="Добавить"></h3>
+        </div>
     </form>
 
 
@@ -67,4 +69,6 @@ if ($_POST['ok']) {
 ?>
 
 
-
+<?
+include "footer.php";
+?>

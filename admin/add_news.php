@@ -19,7 +19,9 @@ include "nav.php";
             <label>Новость</label>
         </div>
         <p>Выберите картинку новости <input type="file" name="img"></p>
-        <p><input type="submit" name="ok" value="Добавить"></p>
+        <div class="containers">
+            <h3><input type="submit" class="neon-btn blue" name="ok" value="Добавить"></h3>
+        </div>
     </form>
 
 
@@ -34,4 +36,9 @@ if ($_POST['ok']) {
     $req = "INSERT INTO `news`(`name`, `subtitle`, `news`, `img`) VALUES ('$name','$subtitle','$news','$img_news')";
     mysqli_query($link,$req) or die(mysqli_error($link));
 }
+?>
+
+
+<?
+include "footer.php";
 ?>

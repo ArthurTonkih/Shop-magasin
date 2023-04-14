@@ -40,4 +40,4 @@ echo "</div>";
 include "footer.php";
 ?>
 
-<script src="js_basket.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="js_basket.js?<?php echo time(); ?>"></script>

@@ -16,7 +16,9 @@ include "nav.php";
             <label>Бренд</label>
         </div>
 
-        <p><input type="submit" name="ok" value="Добавить"></p>
+        <div class="containers">
+            <h3><input type="submit" class="neon-btn blue" name="ok" value="Добавить"></h3>
+        </div>
     </form>
 
 
@@ -27,4 +29,9 @@ if ($_POST['ok']) {
     $req = "INSERT INTO `brands`(`brands`) VALUES ('$brands')";
     mysqli_query($link,$req) or die(mysqli_error($link));
 }
+?>
+
+
+<?
+include "footer.php";
 ?>

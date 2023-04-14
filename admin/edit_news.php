@@ -27,7 +27,9 @@ $id = $_GET['id'];
             <label>Новость</label>
         </div>
         <p>Выберите картинку новости: <input type="file" name="img" value='<?echo $news['img'] ?> '></p>
-        <p><input type="submit" value="Сохранять"></p>
+        <div class="containers">
+            <h3><input type="submit" class="neon-btn blue" name="ok" value="Сохранить"></h3>
+        </div>
     </form>
 
 <?
@@ -45,4 +47,8 @@ if($_POST){
     $req.=" WHERE `id`=$id";
     mysqli_query($link,$req) or die(mysqli_error($link));
 }
+?>
+
+<?
+include "footer.php";
 ?>

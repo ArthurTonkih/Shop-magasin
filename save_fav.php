@@ -1,5 +1,5 @@
 <? 
-$link = mysqli_connect("localhost", "root", "root", "shop");
+$link = mysqli_connect("localhost", "root", "", "shop");
 if ($_POST['id_products']) {
 	$del_fav = 'DELETE FROM `favourites` WHERE `id`= '.$id;
 	$favor = $_POST['id']

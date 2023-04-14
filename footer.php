@@ -11,8 +11,10 @@
 		<p>Все права защищены</p> 
 </div>
 
-<script src="admin/jquery-3.6.0.min.js?<?php echo time(); ?>"></script>
-<script src="jss.js?<?php echo time(); ?>"></script>
-<script src="favorite.js?<?php echo time(); ?>"></script>
+
 </body>
 </html>
+
+<script type="text/javascript" src="admin/jquery-3.6.0.min.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="jss.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="favorite.js?<?php echo time(); ?>"></script>

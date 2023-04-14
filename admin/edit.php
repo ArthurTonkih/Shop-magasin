@@ -65,7 +65,9 @@ include "nav.php";
             ?>
             
 
-        <p><input type="submit" name="ok" value="Сохранять"></p>
+        <div class="containers">
+            <h3><input type="submit" class="neon-btn blue" name="ok" value="Сохранить"></h3>
+        </div>
     </form>
 
 
@@ -91,4 +93,7 @@ if($_POST['ok']){
 }
 
 
+?>
+<?
+include "footer.php";
 ?>

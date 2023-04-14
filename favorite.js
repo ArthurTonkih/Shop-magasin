@@ -19,10 +19,3 @@ $('.fa-star-o').click(function(){
 })
 
 
-
-
-
-// $('.categories input').change(function(){
-// 	$('.categories li').removeClass('categories-activ')
-// 	$(this).closest('li').toggleClass('categories-activ')
-// })

@@ -37,6 +37,7 @@ while ($row = mysqli_fetch_assoc($result))
         ?>
     </table>
     <? echo "<br>"; ?>
+    
 <div class= 'add_categories'><a href="add_categories.php"><button>Добавление категории</button></a></div>
 
 
@@ -67,3 +68,6 @@ while ($row = mysqli_fetch_assoc($result))
 <script type="text/javascript" src="js_categories.js?<?php echo time() ?>"></script>
 <script type="text/javascript" src="js_brands.js?<?php echo time() ?>"></script>
 
+<?
+include "footer.php";
+?>
