@@ -12,11 +12,17 @@ while ($row = mysqli_fetch_assoc($result))
 ?>
 
     <h2>Таблица Новостей</h2>
-    <table>
+<div class="table-prod mtb">
+    <table class="prodtable">
         <tr>
             <th>Название</th>
             <th>Подзаголовок</th>
             <th>Новость</th>
+            <th></th>
+            <th>Изображение</th>
+            <th>Редактирование</th>
+            <th>Удаление</th>
+            
         </tr>
         <?
             for ($i = 0; $i < count($news); $i++){
@@ -34,7 +40,7 @@ while ($row = mysqli_fetch_assoc($result))
         ?>
 
     </table>
-
+</div>
     <? echo "<br>"; ?>
     <div class= 'add-news'><a href="add_news.php"><button>Добавление Новости</button></a></div>
     

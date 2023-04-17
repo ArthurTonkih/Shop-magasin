@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_assoc($result))
 		</form>
 <div class='cataloges'>
 <form>
-		<div class="filters">
+		<div class="filter">
  	<ul class="categories filters">
  		<h3>Категория</h3>
 	<?
@@ -100,7 +100,7 @@ while ($row = mysqli_fetch_assoc($result))
 		<br>
 </form>
 
-
+<div class="tovar">
 <?
 for ($i = 0; $i < count($drinks); $i++){
     echo "
@@ -115,6 +115,7 @@ for ($i = 0; $i < count($drinks); $i++){
 
 }
 ?>
+</div>
 
 </div>
 

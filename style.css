@@ -46,12 +46,44 @@ hr {
 	margin-top: -10px;
 }
 
-table {
-    border: 1px solid #ccc;
+.table-prod {
+	max-width: 1170px;
+	margin: auto;
+	padding: 0 15px;
 }
-tr, td, th {
-    border: 1px solid #ccc;
+.mtb{
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
+.prodtable{
+	width: 100%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	border-collapse: collapse;
+}
+.prodtable th, .prodtable td{
+	text-align: center;
+	padding: 10px;
+}
+.prodtable th{
+	background-color: #1e88e5;
+	color: #fff;
+}
+.prodtable th:nth-child(odd) {
+	background-color: #2196f3;
+}
+.prodtable tr:nth-child(even){
+	background: #f5f5f5;
+}
+.prodtable tr{
+	transition: all .3s;
+}
+.prodtable tr:hover{
+	background-color: #ccc;
+}
+.prodtable td:not(:last-child){
+	border-right: 1px solid #ccc;
+}
+
 
 .social {
 	list-style-type: none;
@@ -248,8 +280,18 @@ li.categories-activ {
 	border: 2px solid coral;
 }
 
+.search{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 25px;
+}
 
 
+
+.cataloges {
+	display: flex;
+}
 .product{
 	border: 2px black solid;
 	border-radius: 10px;

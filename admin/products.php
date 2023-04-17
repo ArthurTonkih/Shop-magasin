@@ -11,14 +11,17 @@ while ($row = mysqli_fetch_assoc($result))
 
 ?>
 
-
     <h2>Таблица товаров</h2>
-    <table>
+<div class="table-prod mtb">
+    <table class="prodtable">
         <tr>
             <th>Название</th>
             <th>Описание</th>
             <th>Цена</th>
+            <th></th>
             <th>Изоброжение</th>
+            <th>Редактирование</th>
+            <th>Удаление</th>
         </tr>
         <?
             for ($i = 0; $i < count($drinks); $i++){
@@ -35,6 +38,7 @@ while ($row = mysqli_fetch_assoc($result))
             }
         ?>
     </table>
+</div>
     <? echo "<br>"; ?>
 <div class= 'add-products'><a href="add_product.php"><button>Добавление товара</button></a></div>
 

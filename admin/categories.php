@@ -18,10 +18,13 @@ while ($row = mysqli_fetch_assoc($result))
 ?>
 
     <h2>Категории</h2>
-    <table>
+<div class="table-prod mtb">
+    <table class="prodtable">
         <tr>
             <th>ID</th>
             <th>Категория</th>
+            <th>Редактирование</th>
+            <th>Удаление</th>
         </tr>
         <?
             for ($i = 0; $i < count($categories); $i++){
@@ -36,16 +39,19 @@ while ($row = mysqli_fetch_assoc($result))
             }
         ?>
     </table>
-    <? echo "<br>"; ?>
+</div>
     
 <div class= 'add_categories'><a href="add_categories.php"><button>Добавление категории</button></a></div>
 
 
 <h2>Бренды</h2>
-    <table>
+<div class="table-prod mtb">
+    <table class="prodtable">
         <tr>
             <th>ID</th>
             <th>Бренд</th>
+            <th>Редактирование</th>
+            <th>Удаление</th>
         </tr>
         <?
             for ($i = 0; $i < count($brands); $i++){
@@ -60,7 +66,7 @@ while ($row = mysqli_fetch_assoc($result))
             }
         ?>
     </table>
-    <? echo "<br>"; ?>
+</div>
 <div class= 'add_brands'><a href="add_brands.php"><button>Добавление бренда</button></a></div>
 
 
